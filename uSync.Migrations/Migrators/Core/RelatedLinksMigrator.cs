@@ -38,6 +38,7 @@ public class RelatedLinksMigrator : SyncPropertyMigratorBase
         }
         foreach (var guid in uniqueMatches) { 
           value = value.Replace(guid, "\"" + guid + "\"");
+          value = value.Replace("\"\"","\"");
         }
         return value;
     }
